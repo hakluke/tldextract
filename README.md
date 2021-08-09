@@ -1,7 +1,9 @@
 tldextract
 ==========
 
-Extract root domain, subdomain name, tld from a url, using the [the Public Suffix List](http://www.publicsuffix.org).
+Extract root domain, subdomain name, tld from a url, using the [IANA TLD list](https://data.iana.org/TLD/tlds-alpha-by-domain.txt).
+
+This is a modified version of https://github.com/joeguo/tldextract which uses the [public suffix](https://www.publicsuffix.org/) list of TLDs. 
 
 Installation
 ==========
