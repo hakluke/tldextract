@@ -215,7 +215,7 @@ func download() ([]byte, error) {
 	for _, line := range lines {
 		line = strings.TrimSpace(line)
 		if line != "" && !strings.HasPrefix(line, "#") {
-			buffer.WriteString(line)
+			buffer.WriteString(strings.ToLower(line))
 			buffer.WriteString("\n")
 		}
 	}
