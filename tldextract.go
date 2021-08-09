@@ -201,7 +201,7 @@ func subdomain(d string) (string, string) {
 }
 
 func download() ([]byte, error) {
-	u := "https://publicsuffix.org/list/public_suffix_list.dat"
+	u := "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
 	resp, err := http.Get(u)
 	if err != nil {
 		return []byte(""), err
