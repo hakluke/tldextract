@@ -201,7 +201,7 @@ func subdomain(d string) (string, string) {
 }
 
 func download() ([]byte, error) {
-	u := "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
+	u := "https://publicsuffix.org/list/public_suffix_list.dat"
 	resp, err := http.Get(u)
 	if err != nil {
 		return []byte(""), err
@@ -214,8 +214,8 @@ func download() ([]byte, error) {
 
 	for _, line := range lines {
 		line = strings.TrimSpace(line)
-		if line != "" && !strings.HasPrefix(line, "#") {
-			buffer.WriteString(strings.ToLower(line))
+		if line != "" && !strings.HasPrefix(line, "//") {
+			buffer.WriteString(line)
 			buffer.WriteString("\n")
 		}
 	}
